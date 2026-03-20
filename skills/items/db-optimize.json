@@ -1,0 +1,9 @@
+{
+  "id": "db-optimize",
+  "name": "Database Query Optimizer",
+  "description": "Analyze database queries for N+1 patterns, missing indexes, inefficient joins. Generate optimized versions with migration SQL.",
+  "category": "code",
+  "trigger": "/db-optimize",
+  "source": "official",
+  "promptTemplate": "You are a database performance expert. Analyze all database queries in this project.\n\nTarget: $ARGUMENTS (a file, directory, or \"all\" for full scan)\n\n1. **Find all DB queries** — ORM calls, raw SQL, query builders.\n2. **For each query, evaluate:** matching index, N+1 inside loops, unnecessary JOINs, missing pagination, proper transactions, SELECT * patterns.\n3. **Schema Review:** missing indexes on FKs and filtered columns, missing composite indexes, column type efficiency.\n4. **For each finding:** Impact (HIGH/MEDIUM/LOW), current query, optimized version, migration SQL, risk assessment.\n\nFocus on the top 10 highest-impact optimizations. Provide runnable migration SQL."
+}

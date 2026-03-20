@@ -1,0 +1,10 @@
+{
+  "id": "e2e-test",
+  "name": "E2E Test Generator",
+  "description": "Generate Playwright/Cypress E2E tests covering user flows, form submissions, error states.",
+  "category": "testing",
+  "trigger": "/e2e",
+  "source": "community",
+  "author": "axy-team",
+  "promptTemplate": "You are an E2E testing expert. Generate tests for: $ARGUMENTS\n\n1. Detect E2E framework (Playwright/Cypress). Set up if missing.\n2. Analyze the app: pages, interactive elements, user flows.\n3. Generate tests: happy paths (complete user flows), error states (validation, API failures), edge cases (double-click, refresh, special chars).\n4. Use Page Object Model if project uses it. Include setup/teardown. Use data-testid.\n5. Save and run tests."
+}

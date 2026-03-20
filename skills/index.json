@@ -1,0 +1,428 @@
+[
+  {
+    "id": "commit-push-pr",
+    "name": "Ship (Commit, Push & PR)",
+    "description": "Create a branch, commit all changes, push to remote, and open a pull request in one command.",
+    "category": "git",
+    "trigger": "/ship",
+    "source": "official"
+  },
+  {
+    "id": "code-review",
+    "name": "Code Review",
+    "description": "Review current uncommitted changes or a specific file for bugs, security issues, and best practices.",
+    "category": "review",
+    "trigger": "/review",
+    "source": "official"
+  },
+  {
+    "id": "refactor",
+    "name": "Refactor Code",
+    "description": "Analyze and refactor code for better readability, maintainability, and reduced complexity.",
+    "category": "code",
+    "trigger": "/refactor",
+    "source": "official"
+  },
+  {
+    "id": "test-gen",
+    "name": "Generate Tests",
+    "description": "Generate comprehensive unit tests with edge cases for a file or function.",
+    "category": "testing",
+    "trigger": "/test",
+    "source": "official"
+  },
+  {
+    "id": "doc-gen",
+    "name": "Generate Documentation",
+    "description": "Generate JSDoc comments, docstrings, README sections, or API documentation for code.",
+    "category": "docs",
+    "trigger": "/doc",
+    "source": "official"
+  },
+  {
+    "id": "debug",
+    "name": "Debug Issue",
+    "description": "Analyze an error or unexpected behavior, trace the root cause, and suggest or apply a fix.",
+    "category": "code",
+    "trigger": "/debug",
+    "source": "official"
+  },
+  {
+    "id": "explain",
+    "name": "Explain Code",
+    "description": "Provide a clear explanation of how a file, function, or system works.",
+    "category": "docs",
+    "trigger": "/explain",
+    "source": "official"
+  },
+  {
+    "id": "optimize",
+    "name": "Optimize Performance",
+    "description": "Analyze code for performance bottlenecks and apply optimizations.",
+    "category": "code",
+    "trigger": "/optimize",
+    "source": "official"
+  },
+  {
+    "id": "security-audit",
+    "name": "Security Audit",
+    "description": "Comprehensive security audit checking for OWASP top 10, secrets, and insecure patterns.",
+    "category": "security",
+    "trigger": "/security",
+    "source": "official"
+  },
+  {
+    "id": "migrate",
+    "name": "Migration Assistant",
+    "description": "Help migrate code between frameworks, libraries, or major versions with step-by-step guidance.",
+    "category": "code",
+    "trigger": "/migrate",
+    "source": "official"
+  },
+  {
+    "id": "api-gen",
+    "name": "Generate API Endpoints",
+    "description": "Scaffold REST API endpoints with routes, validation, and types from a description.",
+    "category": "code",
+    "trigger": "/api",
+    "source": "official"
+  },
+  {
+    "id": "deps-update",
+    "name": "Update Dependencies",
+    "description": "Check for outdated dependencies, analyze breaking changes, and update safely.",
+    "category": "deploy",
+    "trigger": "/deps",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "git-cleanup",
+    "name": "Git Cleanup",
+    "description": "Clean up stale branches, review merge status, and tidy up git history.",
+    "category": "git",
+    "trigger": "/git-clean",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "todo-scan",
+    "name": "TODO Scanner",
+    "description": "Find all TODOs, FIXMEs, HACKs, and XXXs in the codebase and create a prioritized summary.",
+    "category": "review",
+    "trigger": "/todos",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "simplify",
+    "name": "Simplify Code",
+    "description": "Review recently changed files for over-engineering and unnecessary complexity, then simplify.",
+    "category": "review",
+    "trigger": "/simplify",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "minecraft-fabric-coding",
+    "name": "Minecraft Fabric Mod Development",
+    "description": "Expert guide for developing Minecraft Fabric mods using Java. Covers project setup, items, blocks, events, commands, networking, Mixins, MixinExtras, access wideners, data generation, and debugging.",
+    "category": "code",
+    "trigger": "/fabric",
+    "source": "community",
+    "author": "pizzamann33"
+  },
+  {
+    "id": "sftp-deploy",
+    "name": "SFTP Deploy",
+    "description": "Upload build artifacts to a remote server via SFTP/SCP. Reads credentials from .env file for security. Supports compiling first, then uploading specific files.",
+    "category": "deploy",
+    "trigger": "/deploy",
+    "source": "official"
+  },
+  {
+    "id": "cross-ref",
+    "name": "Cross-Project Reference",
+    "description": "Search and read files from sibling projects in your workspace. Useful for sharing APIs, types, configs between repos.",
+    "category": "workflow",
+    "trigger": "/cross-ref",
+    "source": "official"
+  },
+  {
+    "id": "sync-types",
+    "name": "Sync Types Between Projects",
+    "description": "Find and synchronize shared TypeScript types, interfaces, and API contracts between sibling projects.",
+    "category": "workflow",
+    "trigger": "/sync-types",
+    "source": "official"
+  },
+  {
+    "id": "db-optimize",
+    "name": "Database Query Optimizer",
+    "description": "Analyze database queries for N+1 patterns, missing indexes, inefficient joins. Generate optimized versions with migration SQL.",
+    "category": "code",
+    "trigger": "/db-optimize",
+    "source": "official"
+  },
+  {
+    "id": "api-review",
+    "name": "API Design Review",
+    "description": "Review API endpoints for RESTful best practices, consistency, missing validation, and security gaps.",
+    "category": "review",
+    "trigger": "/api-review",
+    "source": "official"
+  },
+  {
+    "id": "adr",
+    "name": "Architecture Decision Record",
+    "description": "Generate a structured ADR documenting an architecture decision with context, alternatives, and consequences.",
+    "category": "docs",
+    "trigger": "/adr",
+    "source": "official"
+  },
+  {
+    "id": "dockerize",
+    "name": "Dockerize Project",
+    "description": "Generate production-ready Dockerfile (multi-stage), docker-compose.yml, .dockerignore, and health checks.",
+    "category": "deploy",
+    "trigger": "/dockerize",
+    "source": "official"
+  },
+  {
+    "id": "ci-pipeline",
+    "name": "CI/CD Pipeline Generator",
+    "description": "Generate GitHub Actions workflows for build, test, lint, deploy with caching and matrix testing.",
+    "category": "deploy",
+    "trigger": "/ci",
+    "source": "official"
+  },
+  {
+    "id": "smart-fix",
+    "name": "Smart Fix",
+    "description": "Intelligent bug diagnosis: reads error output, traces root cause through the codebase, applies minimal fix.",
+    "category": "code",
+    "trigger": "/fix",
+    "source": "official"
+  },
+  {
+    "id": "feature-plan",
+    "name": "Feature Development Plan",
+    "description": "Plan a feature: analyze requirements, identify all files to change, design approach, execute step by step.",
+    "category": "workflow",
+    "trigger": "/feature",
+    "source": "official"
+  },
+  {
+    "id": "e2e-test",
+    "name": "E2E Test Generator",
+    "description": "Generate Playwright/Cypress E2E tests covering user flows, form submissions, error states.",
+    "category": "testing",
+    "trigger": "/e2e",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "git-conflict",
+    "name": "Resolve Git Conflicts",
+    "description": "Analyze and intelligently resolve merge conflicts by understanding the intent of both sides.",
+    "category": "git",
+    "trigger": "/resolve",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "accessibility-audit",
+    "name": "Accessibility Audit (WCAG 2.1)",
+    "description": "WCAG 2.1 AA audit: semantic HTML, ARIA, keyboard navigation, color contrast, screen reader compat.",
+    "category": "review",
+    "trigger": "/a11y",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "convert-to-ts",
+    "name": "Convert to TypeScript",
+    "description": "Convert JavaScript files to TypeScript with proper types, interfaces, and strict mode compatibility.",
+    "category": "code",
+    "trigger": "/to-ts",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "changelog",
+    "name": "Generate Changelog",
+    "description": "Generate a changelog from git history in Keep a Changelog format, grouped by type.",
+    "category": "docs",
+    "trigger": "/changelog",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "env-setup",
+    "name": "Environment Setup Guide",
+    "description": "Analyze the project and generate a complete setup guide with all env vars, dependencies, and verification steps.",
+    "category": "docs",
+    "trigger": "/setup",
+    "source": "community",
+    "author": "axy-team"
+  },
+  {
+    "id": "pipeline",
+    "name": "Configure Deploy Pipeline",
+    "description": "Set up deploy pipelines and automation: auto-push to GitHub, auto-deploy via SFTP, branch triggers, webhook notifications.",
+    "category": "deploy",
+    "trigger": "/pipeline",
+    "source": "official"
+  },
+  {
+    "id": "gitguard",
+    "name": "GitGuard - Sensitive Data Scanner",
+    "description": "Scan the repo for leaked secrets, credentials, API keys, and private data. Checks .gitignore coverage and git history for accidental commits.",
+    "category": "security",
+    "trigger": "/gitguard",
+    "source": "official"
+  },
+  {
+    "id": "preview",
+    "name": "Web Preview Setup",
+    "description": "Configure and start a dev server for live web preview. Detects framework, installs deps, starts server, and opens preview.",
+    "category": "workflow",
+    "trigger": "/preview",
+    "source": "official"
+  },
+  {
+    "id": "java-api-contract-review",
+    "name": "api-contract-review",
+    "description": "Review REST API contracts for HTTP semantics, versioning, backward compatibility, and response consistency.",
+    "category": "java",
+    "trigger": "/java-api",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-architecture-review",
+    "name": "architecture-review",
+    "description": "Analyze Java project architecture - package structure, module boundaries, dependency direction, and layering.",
+    "category": "java",
+    "trigger": "/java-arch",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-clean-code",
+    "name": "clean-code",
+    "description": "Clean Code principles (DRY, KISS, YAGNI), naming conventions, function design, and refactoring for Java.",
+    "category": "java",
+    "trigger": "/java-clean",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-concurrency-review",
+    "name": "concurrency-review",
+    "description": "Review Java concurrency for thread safety, race conditions, deadlocks, and modern patterns (Virtual Threads).",
+    "category": "java",
+    "trigger": "/java-concurrency",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-design-patterns",
+    "name": "design-patterns",
+    "description": "Common design patterns with Java examples: Factory, Builder, Strategy, Observer, Decorator, etc.",
+    "category": "java",
+    "trigger": "/java-patterns",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-java-code-review",
+    "name": "java-code-review",
+    "description": "Systematic code review for Java with null safety, exception handling, concurrency, and performance checks.",
+    "category": "java",
+    "trigger": "/java-review",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-java-migration",
+    "name": "java-migration",
+    "description": "Guide for upgrading Java projects between major versions (8 to 11 to 17 to 21 to 25).",
+    "category": "java",
+    "trigger": "/java-migrate",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-jpa-patterns",
+    "name": "jpa-patterns",
+    "description": "JPA/Hibernate patterns and pitfalls: N+1, lazy loading, transactions, queries.",
+    "category": "java",
+    "trigger": "/java-jpa",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-logging-patterns",
+    "name": "logging-patterns",
+    "description": "Java logging best practices with SLF4J, structured logging (JSON), and MDC for request tracing.",
+    "category": "java",
+    "trigger": "/java-logging",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-maven-dependency-audit",
+    "name": "maven-dependency-audit",
+    "description": "Audit Maven dependencies for outdated versions, security vulnerabilities, and conflicts.",
+    "category": "java",
+    "trigger": "/java-deps",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-performance-smell-detection",
+    "name": "performance-smell-detection",
+    "description": "Detect performance smells in Java: streams, collections, boxing, regex, object creation.",
+    "category": "java",
+    "trigger": "/java-perf",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-security-audit",
+    "name": "security-audit",
+    "description": "Java security checklist: OWASP Top 10, input validation, injection prevention, secure coding with Spring.",
+    "category": "java",
+    "trigger": "/java-security",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-solid-principles",
+    "name": "solid-principles",
+    "description": "SOLID principles checklist with Java examples and refactoring suggestions.",
+    "category": "java",
+    "trigger": "/java-solid",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-spring-boot-patterns",
+    "name": "spring-boot-patterns",
+    "description": "Spring Boot best practices: controllers, services, repositories, configuration, error handling.",
+    "category": "java",
+    "trigger": "/java-spring",
+    "source": "community",
+    "author": "decebals"
+  },
+  {
+    "id": "java-test-quality",
+    "name": "test-quality",
+    "description": "Write high-quality JUnit 5 tests with AssertJ assertions. Test patterns, coverage, mocking.",
+    "category": "java",
+    "trigger": "/java-test",
+    "source": "community",
+    "author": "decebals"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "id": "changelog",
+  "name": "Generate Changelog",
+  "description": "Generate a changelog from git history in Keep a Changelog format, grouped by type.",
+  "category": "docs",
+  "trigger": "/changelog",
+  "source": "community",
+  "author": "axy-team",
+  "promptTemplate": "You are a release manager. Generate a changelog.\n\nRange: $ARGUMENTS (e.g., \"v1.0.0..HEAD\", \"last 2 weeks\", or empty for since last tag)\n\n1. Get commits in range.\n2. Categorize: Added (feat), Changed (refactor/update), Fixed (fix), Removed, Security.\n3. Generate Keep a Changelog format with human-readable descriptions (don't just copy commit messages).\n4. Save/update CHANGELOG.md."
+}

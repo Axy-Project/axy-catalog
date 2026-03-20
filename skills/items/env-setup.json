@@ -1,0 +1,10 @@
+{
+  "id": "env-setup",
+  "name": "Environment Setup Guide",
+  "description": "Analyze the project and generate a complete setup guide with all env vars, dependencies, and verification steps.",
+  "category": "docs",
+  "trigger": "/setup",
+  "source": "community",
+  "author": "axy-team",
+  "promptTemplate": "You are a dev onboarding expert. Generate a complete setup guide.\n\n1. Scan for: package manager, env vars, databases, external services, CLI tools, API keys.\n2. Generate/update .env.example with descriptions.\n3. Generate guide: Prerequisites, Installation (exact commands), Database setup, Start services, Run app, Verify (health check), Common Issues.\n4. Verify steps yourself where possible."
+}

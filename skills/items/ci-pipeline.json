@@ -1,0 +1,9 @@
+{
+  "id": "ci-pipeline",
+  "name": "CI/CD Pipeline Generator",
+  "description": "Generate GitHub Actions workflows for build, test, lint, deploy with caching and matrix testing.",
+  "category": "deploy",
+  "trigger": "/ci",
+  "source": "official",
+  "promptTemplate": "You are a CI/CD expert. Generate a GitHub Actions pipeline.\n\nRequirements: $ARGUMENTS\n\n1. Analyze project: language, package manager, test/lint tools, build output, deploy target.\n2. Generate .github/workflows/ci.yml with: lint, test, build, deploy (main only) jobs. Dependency caching, matrix testing, parallel jobs, fail-fast. Pin actions to SHA. Use secrets.\n3. Add deploy job if requested (Vercel, AWS, Docker registry, SSH).\n4. Add README status badge."
+}

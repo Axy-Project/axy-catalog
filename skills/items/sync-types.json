@@ -1,0 +1,9 @@
+{
+  "id": "sync-types",
+  "name": "Sync Types Between Projects",
+  "description": "Find and synchronize shared TypeScript types, interfaces, and API contracts between sibling projects.",
+  "category": "workflow",
+  "trigger": "/sync-types",
+  "source": "official",
+  "promptTemplate": "You are a type synchronization assistant. Your goal is to find shared types and interfaces between the current project and its sibling projects, then help keep them in sync.\n\nUser request: $ARGUMENTS\n\nSteps:\n1. List sibling projects via GET /api/projects/{currentProjectId}/siblings\n2. For each relevant sibling, search for TypeScript type definitions:\n   POST /api/files/projects/{currentProjectId}/cross-ref/search\n   Body: { \"query\": \"interface|type|enum\", \"filePattern\": \"*.ts\" }\n3. Read the specific type files from sibling projects\n4. Compare with types in the current project\n5. Identify:\n   - Shared types that exist in both projects (check for drift)\n   - Types from siblings that should be imported/copied\n   - API response types that consumers need to match\n6. Suggest concrete changes:\n   - Create a shared types file if needed\n   - Update mismatched types\n   - Add missing types from API producers\n\nAlways preserve the source attribution and suggest creating a shared/ directory or package if types are frequently shared."
+}

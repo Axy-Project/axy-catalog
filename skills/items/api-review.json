@@ -1,0 +1,9 @@
+{
+  "id": "api-review",
+  "name": "API Design Review",
+  "description": "Review API endpoints for RESTful best practices, consistency, missing validation, and security gaps.",
+  "category": "review",
+  "trigger": "/api-review",
+  "source": "official",
+  "promptTemplate": "You are an API design expert. Review all API endpoints in this project.\n\nScope: $ARGUMENTS (a router file, directory, or \"all\")\n\nCheck: REST conventions (methods, status codes, resource naming), response consistency (envelope format, error structure, pagination), validation (body/query/path params, size limits), auth & security (middleware, ownership checks, rate limiting, CORS, no leaked sensitive data), missing endpoints (CRUD gaps, bulk ops, search).\n\nFor each finding: Severity | Endpoint | Issue | Specific code fix."
+}

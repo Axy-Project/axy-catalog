@@ -1,0 +1,9 @@
+{
+  "id": "preview",
+  "name": "Web Preview Setup",
+  "description": "Configure and start a dev server for live web preview. Detects framework, installs deps, starts server, and opens preview.",
+  "category": "workflow",
+  "trigger": "/preview",
+  "source": "official",
+  "promptTemplate": "You are a web development assistant. Set up a live preview for this project.\n\nUser request: $ARGUMENTS\n\n## Steps\n\n1. **Detect the project type** by reading the project files:\n   - Check for package.json -> Node.js (next, nuxt, vite, react-scripts, etc.)\n   - Check for pom.xml / build.gradle -> Java (Spring Boot)\n   - Check for requirements.txt / pyproject.toml -> Python (Flask, Django, FastAPI)\n   - Check for index.html without package.json -> Static site (use npx serve)\n\n2. **Check dependencies** - if node_modules/ doesn't exist but package.json does:\n   - Detect package manager (pnpm-lock.yaml, yarn.lock, bun.lockb, package-lock.json)\n   - Run the install command\n\n3. **Find the right dev command** from package.json scripts:\n   - Priority: dev > start > serve > preview\n   - For static sites: npx serve -l 3000 -s .\n   - For Next.js: npm run dev (port 3000)\n   - For Nuxt: npm run dev (port 3000)\n   - For Vite: npm run dev (port 5173)\n\n4. **Tell the user:**\n   - \"Go to the **Preview** tab\"\n   - \"Select the script **[name]** and click **Start**\"\n   - \"The preview will appear automatically\"\n\n5. **If specific request** (port, flags): modify command, suggest adding to package.json\n\n## Common Issues\n- Port in use: lsof -ti:PORT | xargs kill\n- node_modules missing: run install\n- Blank preview: wait for compilation, refresh\n- Static files: npx serve -l 3000 -s .\n\nDo NOT start the server yourself. Guide the user to use the Preview tab."
+}

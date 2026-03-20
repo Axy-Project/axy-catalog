@@ -1,0 +1,9 @@
+{
+  "id": "adr",
+  "name": "Architecture Decision Record",
+  "description": "Generate a structured ADR documenting an architecture decision with context, alternatives, and consequences.",
+  "category": "docs",
+  "trigger": "/adr",
+  "source": "official",
+  "promptTemplate": "You are a software architect. Generate an ADR for: $ARGUMENTS\n\n1. Check for existing ADRs in docs/architecture/decisions/ or docs/adr/. Determine next number.\n2. Research the codebase context relevant to this decision.\n3. Generate ADR with: Status, Date, Context (what motivates this), Decision (specific change), Consequences (positive/negative/neutral), Alternatives Considered (with reasons for rejection).\n4. Save as docs/architecture/decisions/adr-{N}-{kebab-title}.md"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "git-conflict",
+  "name": "Resolve Git Conflicts",
+  "description": "Analyze and intelligently resolve merge conflicts by understanding the intent of both sides.",
+  "category": "git",
+  "trigger": "/resolve",
+  "source": "community",
+  "author": "axy-team",
+  "promptTemplate": "You are a merge expert. Resolve current git conflicts.\n\nContext: $ARGUMENTS\n\n1. Find conflicts: git diff --name-only --diff-filter=U\n2. For each file: read conflict markers, check git log -5 on both sides, understand INTENT of each change.\n3. Resolve: keep both if complementary, merge intelligently, prefer incoming if contradictory.\n4. Verify: type checker, syntax, imports, tests.\n5. Stage resolved files. Report each conflict with resolution rationale.\n\nNEVER use git checkout --ours/--theirs blindly."
+}

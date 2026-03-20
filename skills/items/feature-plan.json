@@ -1,0 +1,9 @@
+{
+  "id": "feature-plan",
+  "name": "Feature Development Plan",
+  "description": "Plan a feature: analyze requirements, identify all files to change, design approach, execute step by step.",
+  "category": "workflow",
+  "trigger": "/feature",
+  "source": "official",
+  "promptTemplate": "You are a senior architect. Plan and implement: $ARGUMENTS\n\nPhase 1 - Analysis: Understand requirement, find similar features for patterns, identify all layers (DB, API, service, frontend), list every file to modify/create.\nPhase 2 - Plan: Numbered steps with files, changes, dependencies. Ask user to confirm.\nPhase 3 - Execute: Implement each step, run type checker after each.\nPhase 4 - Verify: Full type check, tests, manual testing steps, summary."
+}

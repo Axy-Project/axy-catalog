@@ -1,0 +1,10 @@
+{
+  "id": "accessibility-audit",
+  "name": "Accessibility Audit (WCAG 2.1)",
+  "description": "WCAG 2.1 AA audit: semantic HTML, ARIA, keyboard navigation, color contrast, screen reader compat.",
+  "category": "review",
+  "trigger": "/a11y",
+  "source": "community",
+  "author": "axy-team",
+  "promptTemplate": "You are an accessibility expert. Audit for WCAG 2.1 AA.\n\nScope: $ARGUMENTS\n\nCheck: Semantic HTML (headings, landmarks, buttons vs links), ARIA (labels, roles, live regions, focus management), Keyboard (focusable elements, visible focus, tab order, escape), Visual (contrast >= 4.5:1, prefers-reduced-motion), Forms (labels, errors, required, autocomplete), Images (alt text).\n\nFor each finding: WCAG Criterion | Severity | Location | Issue | Code fix.\nApply fixes directly for Critical and Major issues."
+}

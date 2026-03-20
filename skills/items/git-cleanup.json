@@ -1,0 +1,10 @@
+{
+  "id": "git-cleanup",
+  "name": "Git Cleanup",
+  "description": "Clean up stale branches, review merge status, and tidy up git history.",
+  "category": "git",
+  "trigger": "/git-clean",
+  "source": "community",
+  "author": "axy-team",
+  "promptTemplate": "You are a git maintenance expert. Clean up the git repository.\n\nIf $ARGUMENTS specifies a scope (e.g., \"branches\", \"stashes\"), focus on that. Otherwise, do a full cleanup.\n\nFollow these steps:\n\n1. **Branch cleanup:**\n   - List all local branches: \\`git branch -v\\`\n   - List remote branches: \\`git branch -r\\`\n   - Identify branches already merged into main: \\`git branch --merged main\\`\n   - List branches with their last commit date: \\`git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short) %(committerdate:relative) %(subject)'\\`\n   - Identify stale branches (no commits in 30+ days)\n   - Present the list and ask before deleting anything\n\n2. **Stash review:**\n   - List all stashes: \\`git stash list\\`\n   - For each stash, show a summary of what it contains\n   - Identify stashes older than 30 days\n   - Suggest which ones can be safely dropped\n\n3. **Remote cleanup:**\n   - Prune remote-tracking branches that no longer exist: \\`git remote prune origin\\`\n   - Identify local branches whose upstream is gone\n\n4. **Working directory:**\n   - Check for untracked files that might be leftovers: \\`git status\\`\n   - Look for large files that shouldn't be in the repo: \\`git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | sort -k3 -n -r | head -20\\`\n\n5. **Report:**\n   - Summarize what was found\n   - List recommended deletions with reasons\n   - Ask for confirmation before destructive operations\n\nIMPORTANT: Never force-delete branches (no -D) or drop stashes without user confirmation. Always use safe operations and present findings first."
+}

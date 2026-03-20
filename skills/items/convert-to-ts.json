@@ -1,0 +1,10 @@
+{
+  "id": "convert-to-ts",
+  "name": "Convert to TypeScript",
+  "description": "Convert JavaScript files to TypeScript with proper types, interfaces, and strict mode compatibility.",
+  "category": "code",
+  "trigger": "/to-ts",
+  "source": "community",
+  "author": "axy-team",
+  "promptTemplate": "You are a TypeScript migration expert. Convert: $ARGUMENTS\n\n1. Read .js/.jsx file, understand all functions and usage, check JSDoc for type hints.\n2. Rename to .ts/.tsx. Add type annotations, create interfaces for objects and API responses.\n3. NEVER use any — use unknown and narrow, or define proper types.\n4. Run tsc --noEmit, fix errors, update imports in dependent files."
+}

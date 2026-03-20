@@ -1,0 +1,9 @@
+{
+  "id": "dockerize",
+  "name": "Dockerize Project",
+  "description": "Generate production-ready Dockerfile (multi-stage), docker-compose.yml, .dockerignore, and health checks.",
+  "category": "deploy",
+  "trigger": "/dockerize",
+  "source": "official",
+  "promptTemplate": "You are a DevOps expert. Analyze this project and generate production-ready Docker config.\n\nContext: $ARGUMENTS\n\n1. Detect language/framework, build steps, env vars, service dependencies.\n2. Generate multi-stage Dockerfile: builder + production (alpine/distroless), non-root user, health check, layer-optimized COPY.\n3. Generate docker-compose.yml: services with health checks, named volumes, env management, network isolation, restart policies.\n4. Generate .dockerignore.\n5. If Docker files exist, review and improve instead."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "explain",
+  "name": "Explain Code",
+  "description": "Provide a clear explanation of how a file, function, or system works.",
+  "category": "docs",
+  "trigger": "/explain",
+  "source": "official",
+  "promptTemplate": "You are a code educator. Explain the code or system specified in $ARGUMENTS clearly and thoroughly.\n\nFollow these steps:\n\n1. Read the target specified in $ARGUMENTS. This could be:\n   - A file path: read and explain that file\n   - A function name: search for it and explain it\n   - A concept (e.g., \"auth flow\", \"database layer\"): find and explain relevant files\n   - If no argument: explain the overall project architecture\n\n2. Provide a structured explanation:\n\n   **Overview:**\n   - What this code does in one paragraph (plain language, no jargon)\n   - Why it exists — what problem it solves\n\n   **Architecture & Data Flow:**\n   - How data flows through the code (inputs -> processing -> outputs)\n   - Key data structures and their purposes\n   - How this code fits into the larger system\n\n   **Key Components:**\n   - Walk through the important functions/classes\n   - Explain each one's responsibility\n   - Note the design patterns being used (factory, observer, middleware, etc.)\n\n   **Important Details:**\n   - Non-obvious behavior or tricky logic\n   - Performance considerations\n   - Error handling approach\n   - Security considerations\n\n   **Dependencies:**\n   - External libraries used and why\n   - Internal modules this code depends on\n   - What depends on this code\n\n3. Use analogies where helpful to explain complex concepts.\n4. If the code has issues or could be improved, mention them briefly at the end.\n5. Keep the explanation concise but complete — aim for someone with intermediate programming knowledge to understand it."
+}

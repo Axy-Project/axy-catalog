@@ -1,0 +1,167 @@
+[
+  {
+    "id": "senior-code-reviewer",
+    "name": "Senior Code Reviewer",
+    "description": "Thorough code review with focus on architecture, patterns, security, and maintainability. Provides actionable feedback with severity ratings.",
+    "category": "Code Quality",
+    "role": "reviewer",
+    "icon": "CR",
+    "color": "#e11d48",
+    "model": "claude-sonnet-4-6",
+    "source": "official"
+  },
+  {
+    "id": "refactoring-specialist",
+    "name": "Refactoring Specialist",
+    "description": "Cleans up code, reduces complexity, improves readability, and eliminates duplication while preserving behavior.",
+    "category": "Code Quality",
+    "role": "coder",
+    "icon": "RF",
+    "color": "#8b5cf6",
+    "model": "claude-sonnet-4-6",
+    "source": "community"
+  },
+  {
+    "id": "tdd-coach",
+    "name": "TDD Coach",
+    "description": "Test-driven development expert. Writes failing tests first, then guides minimal implementation to make them pass.",
+    "category": "Testing",
+    "role": "tester",
+    "icon": "TD",
+    "color": "#f59e0b",
+    "model": "claude-sonnet-4-6",
+    "source": "official"
+  },
+  {
+    "id": "security-analyst",
+    "name": "Security Analyst",
+    "description": "Finds vulnerabilities, checks OWASP Top 10, reviews authentication/authorization, and suggests fixes with severity ratings.",
+    "category": "Security",
+    "role": "reviewer",
+    "icon": "SA",
+    "color": "#dc2626",
+    "model": "claude-sonnet-4-6",
+    "source": "official"
+  },
+  {
+    "id": "documentation-writer",
+    "name": "Documentation Writer",
+    "description": "Writes clear, comprehensive docs: README files, API documentation, inline comments, architecture guides, and onboarding materials.",
+    "category": "Documentation",
+    "role": "general",
+    "icon": "DW",
+    "color": "#0891b2",
+    "model": "claude-sonnet-4-6",
+    "source": "official"
+  },
+  {
+    "id": "debugger",
+    "name": "Debugger",
+    "description": "Expert at tracing bugs, reading logs, isolating root causes, and applying targeted fixes with minimal side effects.",
+    "category": "Debugging",
+    "role": "coder",
+    "icon": "DB",
+    "color": "#ea580c",
+    "model": "claude-sonnet-4-6",
+    "source": "official"
+  },
+  {
+    "id": "architect",
+    "name": "Architect",
+    "description": "System design, architecture decisions, tech stack evaluation, and scalability planning. Thinks deeply before recommending.",
+    "category": "Architecture",
+    "role": "orchestrator",
+    "icon": "AR",
+    "color": "#7c3aed",
+    "model": "claude-sonnet-4-6",
+    "source": "official"
+  },
+  {
+    "id": "performance-optimizer",
+    "name": "Performance Optimizer",
+    "description": "Profiling, benchmarking, and optimization specialist. Identifies bottlenecks and applies targeted performance improvements.",
+    "category": "Performance",
+    "role": "coder",
+    "icon": "PO",
+    "color": "#16a34a",
+    "model": "claude-sonnet-4-6",
+    "source": "community"
+  },
+  {
+    "id": "devops-engineer",
+    "name": "DevOps Engineer",
+    "description": "CI/CD pipelines, Docker, Kubernetes, infrastructure as code, monitoring, and deployment automation specialist.",
+    "category": "DevOps",
+    "role": "coder",
+    "icon": "DO",
+    "color": "#2563eb",
+    "model": "claude-sonnet-4-6",
+    "source": "community"
+  },
+  {
+    "id": "database-expert",
+    "name": "Database Expert",
+    "description": "Schema design, query optimization, migration strategies, and database architecture for SQL and NoSQL systems.",
+    "category": "Database",
+    "role": "coder",
+    "icon": "DE",
+    "color": "#0d9488",
+    "model": "claude-sonnet-4-6",
+    "source": "community"
+  },
+  {
+    "id": "ui-ux-developer",
+    "name": "UI/UX Developer",
+    "description": "Frontend specialist focused on accessibility, responsive design, component architecture, and modern CSS/JS patterns.",
+    "category": "Frontend",
+    "role": "coder",
+    "icon": "UX",
+    "color": "#ec4899",
+    "model": "claude-sonnet-4-6",
+    "source": "community"
+  },
+  {
+    "id": "api-designer",
+    "name": "API Designer",
+    "description": "RESTful API design, OpenAPI specifications, versioning strategies, and API security best practices.",
+    "category": "API",
+    "role": "coder",
+    "icon": "AD",
+    "color": "#4f46e5",
+    "model": "claude-sonnet-4-6",
+    "source": "community"
+  },
+  {
+    "id": "migration-expert",
+    "name": "Migration Expert",
+    "description": "Framework, language, and version migrations. Plans incremental migration paths with rollback strategies.",
+    "category": "Migration",
+    "role": "orchestrator",
+    "icon": "ME",
+    "color": "#d97706",
+    "model": "claude-sonnet-4-6",
+    "source": "community"
+  },
+  {
+    "id": "tech-lead",
+    "name": "Tech Lead",
+    "description": "Project planning, task decomposition, code standards, and technical decision-making. Coordinates work across the team.",
+    "category": "Leadership",
+    "role": "orchestrator",
+    "icon": "TL",
+    "color": "#6d28d9",
+    "model": "claude-sonnet-4-6",
+    "source": "official"
+  },
+  {
+    "id": "quick-helper",
+    "name": "Quick Helper",
+    "description": "Fast answers and simple tasks with minimal token usage. Uses Haiku for speed and cost efficiency.",
+    "category": "Utility",
+    "role": "general",
+    "icon": "QH",
+    "color": "#64748b",
+    "model": "claude-haiku-4-5-20251001",
+    "source": "official"
+  }
+]

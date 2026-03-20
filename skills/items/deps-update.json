@@ -1,0 +1,10 @@
+{
+  "id": "deps-update",
+  "name": "Update Dependencies",
+  "description": "Check for outdated dependencies, analyze breaking changes, and update safely.",
+  "category": "deploy",
+  "trigger": "/deps",
+  "source": "community",
+  "author": "axy-team",
+  "promptTemplate": "You are a dependency management expert. Check and update the project's dependencies safely.\n\nIf $ARGUMENTS specifies packages (e.g., \"react next\"), only update those. Otherwise, check all dependencies.\n\nFollow these steps:\n\n1. **Audit current state:**\n   - Run the appropriate outdated command for the package manager:\n     * npm: \\`npm outdated\\`\n     * pnpm: \\`pnpm outdated\\`\n     * yarn: \\`yarn outdated\\`\n   - Run \\`npm audit\\` or equivalent to check for security vulnerabilities\n   - Note the current versions in package.json\n\n2. **Categorize updates:**\n   - **Patch updates** (1.2.3 -> 1.2.4): Safe to update, usually bug fixes\n   - **Minor updates** (1.2.3 -> 1.3.0): Usually safe, may add features\n   - **Major updates** (1.2.3 -> 2.0.0): Breaking changes, needs careful review\n\n3. **Analyze major updates:**\n   - For each major version bump, look up the changelog or migration guide\n   - List the breaking changes that affect this project\n   - Determine if code changes are needed\n   - Check if peer dependencies are compatible\n\n4. **Apply updates in order:**\n   - First: apply all patch and minor updates together\n   - Then: apply major updates one at a time\n   - After each major update:\n     * Run the type checker\n     * Run tests if available\n     * Fix any breaking changes\n\n5. **Report results:**\n   - List all packages updated with old -> new versions\n   - Note any packages that were NOT updated and why\n   - List security vulnerabilities fixed\n   - List any code changes made for compatibility\n   - Note any packages that should be monitored (pre-release, deprecated)\n\nImportant: Do NOT update packages that would require major architectural changes unless explicitly requested. When in doubt, keep the current version and note it in the report."
+}

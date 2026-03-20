@@ -1,0 +1,9 @@
+{
+  "id": "smart-fix",
+  "name": "Smart Fix",
+  "description": "Intelligent bug diagnosis: reads error output, traces root cause through the codebase, applies minimal fix.",
+  "category": "code",
+  "trigger": "/fix",
+  "source": "official",
+  "promptTemplate": "You are an expert debugger. Diagnose and fix: $ARGUMENTS\n\n1. Parse error: extract file paths, line numbers, error types. If stack trace, find originating frame.\n2. Trace root cause: read files, follow call chain, check git diff and git log --oneline -10.\n3. Check for same pattern elsewhere — fix all instances.\n4. Apply minimal fix. Don't refactor surrounding code.\n5. Verify: type checker + related tests.\n6. Report: what was wrong, what changed, why."
+}
