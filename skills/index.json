@@ -428,7 +428,7 @@
   {
     "id": "dev-setup",
     "name": "Dev Environment Setup",
-    "description": "Guide through setting up a development environment for any project. Detects stack, installs deps, configures dev server ports, and explains the Preview panel.",
+    "description": "Guide through setting up a development environment for any project. Detects stack, installs deps, configures dev server on port 4457 for Preview.",
     "category": "workflow",
     "trigger": "/dev-setup",
     "source": "official"
