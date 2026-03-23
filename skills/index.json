@@ -424,5 +424,13 @@
     "trigger": "/java-test",
     "source": "community",
     "author": "decebals"
+  },
+  {
+    "id": "dev-setup",
+    "name": "Dev Environment Setup",
+    "description": "Guide through setting up a development environment for any project. Detects stack, installs deps, configures dev server ports, and explains the Preview panel.",
+    "category": "workflow",
+    "trigger": "/dev-setup",
+    "source": "official"
   }
 ]
