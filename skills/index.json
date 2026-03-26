@@ -432,5 +432,13 @@
     "category": "workflow",
     "trigger": "/dev-setup",
     "source": "official"
+  },
+  {
+    "id": "implement-doc",
+    "name": "Implement from Document",
+    "description": "Read a .md or .docx document end-to-end and implement everything described in it autonomously, without stopping or asking questions.",
+    "category": "workflow",
+    "trigger": "/implement-doc",
+    "source": "official"
   }
 ]
